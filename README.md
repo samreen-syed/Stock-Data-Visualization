@@ -19,8 +19,8 @@ An interactive web application that visualizes stock market data using **Chart.j
 ```
 📦 stock-data-visualization
  ┣ 📜 index.html        # Main UI and logic
- ┣ 📜 styles.css        # Custom styling (if separate)
- ┣ 📜 script.js         # JavaScript logic (if separate)
+ ┣ 📜 styles.css        # Custom styling
+ ┣ 📜 script.js         # JavaScript logic 
  ┣ 📜 README.md         # Project documentation
 ```
 

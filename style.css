@@ -1,0 +1,15 @@
+body {
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    transition: background 0.5s ease, color 0.5s ease;
+    font-family: 'Poppins', sans-serif;
+}
+.dark-mode {
+    background: #222;
+    color: #fff;
+}
+h2 { text-shadow: 3px 3px 8px rgba(0,0,0,0.4); }
+.list-group-item { cursor: pointer; transition: all 0.3s ease-in-out; }
+.list-group-item:hover { transform: scale(1.1); background: #ff6f61; }
+canvas { background: #fff; border-radius: 10px; }
+.theme-toggle, .download-btn { background: #ff6f61; color: white; border: none; padding: 10px 15px; }
+.loading { display: none; font-size: 18px; }

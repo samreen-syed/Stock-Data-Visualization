@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded", () => {
     const ctx = document.getElementById("stockChart").getContext("2d");
     let stockChart;
@@ -82,5 +80,36 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
         });
+    }
+
+    function filterCompanies() {
+        let filter = document.getElementById("searchBar").value.toUpperCase();
+        document.querySelectorAll("#companyList li").forEach(item => {
+            item.style.display = item.textContent.toUpperCase().includes(filter) ? "" : "none";
+        });
+    }
+
+    function toggleTheme() {
+        document.body.classList.toggle("dark-mode");
+        localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        if (localStorage.getItem("theme") === "dark") {
+            document.body.classList.add("dark-mode");
+        }
+    });
+
+    function downloadChart() {
+        let link = document.createElement('a');
+        link.href = stockChart.toBase64Image();
+        link.download = 'stock_chart.png';
+        link.click();
+    }
+
+    function filterByDate() {
+        let startDate = document.getElementById("startDate").value;
+        let endDate = document.getElementById("endDate").value;
+        alert(`Filtering from ${startDate} to ${endDate}`);
     }
 });

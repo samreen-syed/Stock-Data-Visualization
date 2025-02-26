@@ -11,9 +11,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="container mt-4">
-    <button class="theme-toggle" onclick="toggleTheme()">🌙 Toggle Theme</button>
+    <button class="theme-toggle" id="themeToggle">🌙 Toggle Theme</button>
     <h2 class="text-center">📊 Stock Data Visualization</h2>
-    <input type="date" id="startDate"> <input type="date" id="endDate"> <button onclick="filterByDate()">Apply</button>
     <input type="text" id="searchBar" class="form-control mb-3" placeholder="🔍 Search Company..." onkeyup="filterCompanies()">
     <div class="row">
         <div class="col-md-4">
@@ -21,12 +20,12 @@
         </div>
         <div class="col-md-8">
             <canvas id="stockChart"></canvas>
-            <button class="download-btn" onclick="downloadChart()">📥 Download Chart</button>
+            <button class="download-btn mt-2" id="downloadChart">📥 Download Chart</button>
         </div>
     </div>
-    <div class="loading" id="loading">⏳ Loading...</div>
+    <div class="loading" id="loading">⏳ Loading data...</div>
+    <script src="script.js">
     
-    
-    <script src="script.js"></script>
+    </script>
 </body>
 </html>
